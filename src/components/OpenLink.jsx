@@ -1,17 +1,17 @@
 // components/Content.js
-const Content = () => {
+const OpenLink = ({ title, url}) => {
   return (
     <>
       <a
         className="App-link"
-        href="https://github.com/MAIKIREX/desarrollo-frontend-react"
+        href={url}
         target="_blank"
         rel="noopener noreferrer"
       >
-        My React Project (GitHub)
+        {title}
       </a>
     </>
   );
 };
 
-export default Content;
+export default OpenLink;
