@@ -1,10 +1,11 @@
 import './App.css';
-import Default from './screens/Default';
+//import Default from './screens/Default';
+import FilterableProductTable from "./screens/Product"
 
 function App() {
   return (
     <div className='App'>
-      <Default></Default>
+      <FilterableProductTable/>
     </div>
   );
 }
