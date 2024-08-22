@@ -1,9 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom'
 import Default from "../screens/Default"
 import Product from "../screens/Product"
+import { LoginForm } from '../screens/Forms/LoginForm'
 
 import App from "../App"
-import { LoginForm } from '../screens/Forms/LoginForm'
+
+const basename = process.env.NODE_ENV === 'production' ? '/desarrollo-frontend-react' : '/';
 
 const routes = createBrowserRouter([
     {
@@ -24,6 +26,9 @@ const routes = createBrowserRouter([
             }
         ]
     }
-])
+],
+{
+    basename: basename
+})
 
 export default routes
