@@ -150,37 +150,98 @@ form div input:focus {
 
 /* style del land*/
 
-hr{
-  height: 3px;
-  border: none;
-  background-color: #28a745;
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
 }
 
-.LandingPage-header{
+/* Estilo del header */
+.LandingPage-header {
   background-color: #28a745;
   color: white;
-  margin: 1rem 3rem;
-  border-radius: 1rem;
-  padding: 10px;
+  margin: 2rem 3rem;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.LandingPage-body{
+.LandingPage-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* Estilo del cuerpo */
+.LandingPage-body {
   text-align: left;
   margin: 0 3rem;
+  padding-top: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
-.LandingPage-body h2{
-  margin-bottom: 1px;
+.LandingPage-body hr {
+  height: 4px;
+  border: none;
+  background-color: #28a745;
+  width: 100%;
+  margin: 10px auto;
+  border-radius: 2px;
 }
 
-.LandingPage-container{
+.LandingPage-body h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  color: #28a745;
+}
+
+.LandingPage-body p {
+  margin: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Estilo del contenedor de temas */
+.LandingPage-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
-.LandingPage-container div{
-  margin: 0 10px;
+.LandingPage-container div {
+  background-color: #f1f1f1;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-basis: 45%;
+  transition: transform 0.3s ease;
 }
 
-.LandingPage-footer{
-  margin-top: 3rem;
+.LandingPage-container div:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilo del footer */
+.LandingPage-footer {
+  margin: 2rem 3rem;
+  text-align: center;
+  background-color: #28a745;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.LandingPage-footer p {
+  margin: 0;
+  font-size: 1rem;
 }
