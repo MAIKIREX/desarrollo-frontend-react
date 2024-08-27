@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const LoginForm = () => {
     // Mueve la declaración del hook fuera del return
-    const [values, handleChange] = useForm({ username: "", email: "", password: ""});
+    const [values, handleChange, resetForm] = useForm({ username: "", email: "", password: ""});
     const [showModalInfo, setShowModalInfo] = useState(false);
     const [showPassword, setShowPassword] = useState(false); 
     const form = useSelector((state) => state.form);
@@ -47,6 +47,7 @@ const LoginForm = () => {
     }
 
     const cleanModalExitLogin = () => {
+        resetForm()
         dispatch(seveFormData({email: "", username: ""}));
         setshowModalExitLogin(false)
     }
