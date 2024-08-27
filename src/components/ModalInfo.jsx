@@ -23,7 +23,7 @@ const ModalInfo = ({ visible, message, onClose}) => {
     )
 }
 
-const ModalExitLogin = ({ visible, message, buttonmessage , onClose}) => {
+const ModalExitLogin = ({ visible, message, buttonmessage , onClose, closeLogin}) => {
     if(!visible){
         return null;
     }
@@ -38,7 +38,7 @@ const ModalExitLogin = ({ visible, message, buttonmessage , onClose}) => {
                 <div>
                     <p>{message}</p>
                 </div>
-                <button>{buttonmessage}</button>
+                <button onClick={closeLogin}>{buttonmessage}</button>
                 <button className="close-btn-success" onClick={onClose}>
                     X
                 </button>

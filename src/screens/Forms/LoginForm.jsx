@@ -16,7 +16,7 @@ const LoginForm = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         if(values.password === form.password){
-            console.log("estamos aqui")
+            console.log(values)
             dispatch(seveFormData(values));
         } else {
             hideModalInfoTrue();
@@ -35,6 +35,22 @@ const LoginForm = () => {
         setShowPassword(!showPassword);
     };
 
+    /*Modal para el Logaut*/
+    const [showModalExitLogin, setshowModalExitLogin] = useState(false);
+    const handleLogout = (event) => {
+        event.preventDefault();
+        setshowModalExitLogin(true)
+    }
+
+    const hideModalExitLogin = () =>{
+        setshowModalExitLogin(false)
+    }
+
+    const cleanModalExitLogin = () => {
+        dispatch(seveFormData({email: "", username: ""}));
+        setshowModalExitLogin(false)
+    }
+
     return (
         <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
@@ -45,6 +61,14 @@ const LoginForm = () => {
                 visible={showModalInfo}
                 message="Password incorrecto"
                 onClose={hideModalInfo}
+            />
+
+            <ModalExitLogin
+                visible={showModalExitLogin}
+                message ="¿Estas seguro de que quieres cerrar la sesion?"
+                buttonmessage = "Presionar para salir!!!"
+                onClose = {hideModalExitLogin}
+                closeLogin = {cleanModalExitLogin}
             />
             <div className="container">
                 <form onSubmit={handleSubmit}>
@@ -85,7 +109,7 @@ const LoginForm = () => {
                     </div>
                     <div className="button-container">
                         <button type="submit">Submit</button>
-                        <a className="linkLogout" href="">Logout</a>
+                        <a onClick={handleLogout} className="linkLogout" href="">Logout</a>
                     </div>
                 </form>
             </div>
