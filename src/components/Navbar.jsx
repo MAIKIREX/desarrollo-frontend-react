@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import "./Navbar.css"
+import "./Navbar.css";
 
 const Navbar = () => {
     const form = useSelector((state) => state.form);
@@ -9,25 +9,29 @@ const Navbar = () => {
         <nav className="Navbar">
             <ul className="Navbar-page">
                 <li>
-                    <Link className="navbar-a" to="/">Home</Link>
+                    <Link className="navbar-a" to="/">
+                        Home
+                    </Link>
                 </li>
                 <li>
-                    <Link className="navbar-a" to="/default">Default</Link>
+                    <Link className="navbar-a" to="/product">
+                        Product
+                    </Link>
                 </li>
                 <li>
-                    <Link className="navbar-a" to="/product">Product</Link>
-                </li>
-                <li>
-                    <Link className="navbar-a" to="/forms">Forms</Link>
+                    <Link className="navbar-a" to="/forms">
+                        Forms
+                    </Link>
                 </li>
             </ul>
             <ul className="Navbar-info">
-                <li>
-                    <p>Bienvenido {form.formData.username}: {form.formData.email}</p>
-                </li>
+                <p>
+                    Bienvenido <span>{form.formData.username}</span>:{" "}
+                    <span>{form.formData.email}</span>
+                </p>
             </ul>
         </nav>
-    )
-}
+    );
+};
 
-export {Navbar}
+export { Navbar };

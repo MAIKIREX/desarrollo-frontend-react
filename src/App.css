@@ -186,3 +186,40 @@ form div input:focus {
   color: blue;
   margin-left: 10px;
 }
+
+/* style del land*/
+
+hr{
+  height: 3px;
+  border: none;
+  background-color: #28a745;
+}
+
+.LandingPage-header{
+  background-color: #28a745;
+  color: white;
+  margin: 1rem 3rem;
+  border-radius: 1rem;
+  padding: 10px;
+}
+
+.LandingPage-body{
+  text-align: left;
+  margin: 0 3rem;
+}
+
+.LandingPage-body h2{
+  margin-bottom: 1px;
+}
+
+.LandingPage-container{
+  display: flex;
+}
+
+.LandingPage-container div{
+  margin: 0 10px;
+}
+
+.LandingPage-footer{
+  margin-top: 3rem;
+}

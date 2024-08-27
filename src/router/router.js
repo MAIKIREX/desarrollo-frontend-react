@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom'
 import Default from "../screens/Default"
 import Product from "../screens/Product"
 import { LoginForm } from '../screens/Forms/LoginForm'
+import LandingPage from "../screens/LandingPage/LandingPage"
 
 import App from "../App"
 
@@ -13,8 +14,8 @@ const routes = createBrowserRouter([
         element: <App/>,
         children: [
             {
-                path: '/default',
-                element: <Default></Default>,
+                path: '/',
+                element: <LandingPage></LandingPage>,
             },
             {
                 path: '/product',
