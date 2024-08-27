@@ -1,10 +1,11 @@
 .Navbar{
     background-color: #333;
+    display: flex;
+    justify-content: space-between;
 }
 
 ul{
     display: flex;
-    justify-content: flex-start;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -14,12 +15,12 @@ li{
     margin: 1rem;
 }
 
-a{
+.navbar-a, p{
     text-decoration: none;
     color: azure;
     font-weight: bold;
 }
 
-a:hover{
+.navbar-a:hover{
     color: #ffcc00;
 }

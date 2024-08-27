@@ -39,46 +39,89 @@
 
 /* styles Forms*/
 
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 150px;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f0f2f5;
 }
 
 form {
   max-width: 480px;
+  width: 100%;
   margin: 0 auto;
   padding: 30px;
-  border: 1px solid #ccc;
+  border: 1px solid #e0e0e0;
   border-radius: 10px;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-form h2{
+form h2 {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #333333;
 }
 
 form h5 {
   text-align: center;
+  margin-bottom: 20px;
+  color: #555555;
 }
 
-form div{
-  margin: 10pxx 0;
-  padding-right: 10px;
+form div {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
 form div label {
-  width: 100px;
-  margin-right: 10px;
+  width: 120px;
+  margin-right: 15px;
+  font-weight: bold;
+  color: #555555;
   text-align: right;
 }
 
 form div input {
   flex: 1;
-  min-width: 200px;
-  width: calc(100% - 120px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+
+form div input:focus {
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.button-show {
+  background-color: #28a745; /* Verde para "Show" */
+  color: #ffffff;
+  height: 2rem;
+  margin-left: 10px;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px rgba(57, 65, 74, 0.5);
+}
+
+.button-hide {
+  background-color: #dc3545; /* Rojo para "Hide" */
+  color: #ffffff;
+  height: 2rem;
+  margin-left: 10px;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px rgba(57, 65, 74, 0.5);
+}
+
+.button-show:hover,
+.button-hide:hover {
+  opacity: 0.8;
 }
 
 .button-container {
@@ -86,11 +129,21 @@ form div input {
   justify-content: center;
 }
 
-.button-container button{
-  padding: 8px 40px;
+.button-container button {
+  padding: 12px 40px;
   font-size: 16px;
-  margin-top: 10px;
+  background-color: #007BFF;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
+
 
 /* style to modals*/
 .modal-overlay {
@@ -127,4 +180,9 @@ form div input {
   color: #7e4f1a;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+.linkLogout{
+  color: blue;
+  margin-left: 10px;
 }
