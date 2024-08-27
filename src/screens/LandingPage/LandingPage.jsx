@@ -24,6 +24,7 @@ const LandingPage = () => {
                 <p>Para profundizar en los temas cubiertos, sonculta los siguientes recursos</p>
             </section>
             <footer className="LandingPage-footer">
+                <hr />
                 <p>2024 Modulo 7. Usip</p>
             </footer>
         </>

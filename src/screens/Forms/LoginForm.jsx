@@ -74,7 +74,6 @@ const LoginForm = () => {
             <div className="container">
                 <form onSubmit={handleSubmit}>
                     <h5>username: {form.formData.username}</h5>
-                    <h5>email: {form.password}</h5>
                     <div>
                         <label htmlFor="username">Username:</label>
                         <input
