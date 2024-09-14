@@ -1,0 +1,3 @@
+export const SET_DICTIONARY_DATA = "SET_DICTIONARY_DATA" 
+export const DELETE_WORD = "DELETE_WORD" 
+

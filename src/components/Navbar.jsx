@@ -23,6 +23,11 @@ const Navbar = () => {
                         Forms
                     </Link>
                 </li>
+                <li>
+                    <Link className="navbar-a" to="/dictionary">
+                        Dictionary
+                    </Link>
+                </li>
             </ul>
             <ul className="Navbar-info">
                 <p>
